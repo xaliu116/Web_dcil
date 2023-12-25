@@ -2,18 +2,31 @@ import gradio as gr
 from modelscope.utils.constant import Tasks
 from modelscope.pipelines import pipeline
 from modelscope.outputs import OutputKeys
+<<<<<<< HEAD
+=======
+import cv2
+>>>>>>> 20838012b4d549e0366888bc62ff8ad0c24127a4
 
 def dcnet_style_transfer_anime(content_img):
     img_cartoon = pipeline(Tasks.image_portrait_stylization, 
                            model='damo/cv_unet_person-image-cartoon_compound-models')
+<<<<<<< HEAD
     result = img_cartoon(content_img)
+=======
+    print(content_img.shape)
+    result = img_cartoon(dict(content=content_img))
+>>>>>>> 20838012b4d549e0366888bc62ff8ad0c24127a4
     output_img = result[OutputKeys.OUTPUT_IMG]
     return output_img
 
 def dcnet_style_transfer_3d(content_img):
     img_cartoon = pipeline(Tasks.image_portrait_stylization, 
                            model='damo/cv_unet_person-image-cartoon-3d_compound-models')
+<<<<<<< HEAD
     result = img_cartoon(content_img)
+=======
+    result = img_cartoon(dict(content=content_img))
+>>>>>>> 20838012b4d549e0366888bc62ff8ad0c24127a4
     output_img = result[OutputKeys.OUTPUT_IMG]
     return output_img
 
