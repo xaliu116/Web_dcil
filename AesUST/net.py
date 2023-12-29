@@ -2,7 +2,7 @@
 
 import torch
 import torch.nn as nn
-from function import calc_mean_std, mean_variance_norm
+from AesUST.function import calc_mean_std, mean_variance_norm
 
 
 decoder = nn.Sequential(

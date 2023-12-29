@@ -8,7 +8,7 @@ import net
 from pathlib import Path
 import time
 import traceback
-from function import coral
+from AesUST.function import coral
 
 
 def test_transform(size, crop):
