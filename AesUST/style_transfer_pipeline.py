@@ -148,7 +148,7 @@ def run_multiple_style_transfer(content_paths, style_paths):
             save_path = os.path.join(temp_dir, output_name)
             save_image(output, save_path)
 
-    zip_filename = "transfered_images.zip"
+    zip_filename = "风格迁移后的图像.zip"
     with zipfile.ZipFile(zip_filename, "w") as zipf:
         for root, dirs, files in os.walk(temp_dir):
             for file in files:
