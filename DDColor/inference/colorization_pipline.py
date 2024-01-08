@@ -6,11 +6,14 @@ from tqdm import tqdm
 import torch
 from basicsr.archs.ddcolor_arch import DDColor
 import torch.nn.functional as F
+import shutil
+import tempfile
+import zipfile
 
 
 class ImageColorizationPipeline(object):
 
-    def __init__(self, model_path, input_size=512):
+    def __init__(self, input_size=512):
         
         self.input_size = input_size
         if torch.cuda.is_available():
@@ -43,6 +46,9 @@ class ImageColorizationPipeline(object):
                 num_queries=256,
             ).to(self.device)
 
+        
+    @torch.no_grad()
+    def load_state_dict(self, model_path):
         self.model.load_state_dict(
             torch.load(model_path, map_location=torch.device('cpu'))['params'],
             strict=False)
@@ -83,6 +89,61 @@ def colorize_image(img,model_path="modelscope/damo/cv_ddcolor_image-colorization
     image_out = colorizer.process(img)
     
     return image_out
+
+
+colorizer = ImageColorizationPipeline() 
+def load_colorizer_model(model_path="DDColor/modelscope/damo/cv_ddcolor_image-colorization/pytorch_model.pt"):
+    colorizer.load_state_dict(model_path)   
+
+def run_image_colorization(image_path, image_out_path=None):
+    # Load the image
+    img = cv2.imread(image_path)
+    # Process the image
+    image_out = colorizer.process(img)
+
+    # Save the image
+    if image_out_path  is not None:
+        cv2.imwrite(image_out_path, image_out)
+
+def colorize_image(input_img):
+   
+    image_out = colorizer.process(input_img)
+    image_out = cv2.cvtColor(image_out, cv2.COLOR_BGR2RGB)
+    
+    return image_out
+
+def coloriza_files(input_files):
+    # Create a temporary directory to save the colorized images
+    temp_dir = tempfile.mkdtemp(prefix="colorized_images_")
+
+
+    # Process each file and save the colorized images
+    for file_path in input_files:
+        img = cv2.imread(file_path)
+        colorized_img = colorizer.process(img)
+        
+        save_path = os.path.join(temp_dir, os.path.basename(file_path))
+        cv2.imwrite(save_path, colorized_img)
+
+    # Create a zip file containing the colorized images
+    zip_filename = "colorized_images.zip"
+    with zipfile.ZipFile(zip_filename, "w") as zipf:
+        for root, dirs, files in os.walk(temp_dir):
+            for file in files:
+                file_path = os.path.join(root, file)
+                arcname = os.path.relpath(file_path, temp_dir)
+                zipf.write(file_path, arcname=arcname)
+
+    # Remove the temporary directory
+    shutil.rmtree(temp_dir)
+
+    return zip_filename
+
+# Define the function to handle file uploads for colorizing multiple files
+def colorize_files(input_files):
+    zip_filename = coloriza_files(input_files)
+    return zip_filename
+
 
 
 def main():
