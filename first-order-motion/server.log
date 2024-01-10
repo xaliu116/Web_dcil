@@ -1,0 +1,623 @@
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 56, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 55, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 60, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 62, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 63, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 63, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 63, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/Monalisa.png
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 66, in api_root
+    respond = run_from_server('backend_python/uploads/'+vid_name, 'backend_python/uploads/'+img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 35, in run_from_server
+    res2 = stage1.cropImage(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 128, in cropImage
+    face_present = face_detection(imagePath)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage1.py", line 47, in face_detection
+    bounding_boxes, landmarks = detect_faces(img, min_face_size=10.0)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/detector.py", line 59, in detect_faces
+    boxes = run_first_stage(image, pnet, scale=s, threshold=thresholds[0])
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/first_stage.py", line 33, in run_first_stage
+    output = net(img)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/mtcnn_pytorch_master/src/get_nets.py", line 70, in forward
+    x = self.features(x)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [10, 3, 3, 3], expected input[1, 4, 332, 332] to have 3 channels, but got 4 channels instead
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+saving /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 444, in write
+    self.save_args["format"] = format or Image.registered_extensions()[extension]
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2408, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 64, in api_root
+    respond = run_from_server('backend_python/uploads/' + vid_name, 'backend_python/uploads/' + img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 41, in run_from_server
+    stage2.generate_output()
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage2.py", line 47, in generate_output
+    imageio.mimsave(generated_video_buffer, [img_as_ubyte(frame) for frame in predictions], fps=fps)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/core/v3_plugin_api.py", line 367, in __exit__
+    self.close()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 123, in close
+    self._flush_writer()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 466, in _flush_writer
+    primary_image.save(self._request.get_file(), **self.save_args)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2411, in save
+    raise ValueError(msg) from e
+ValueError: unknown file extension: 
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 444, in write
+    self.save_args["format"] = format or Image.registered_extensions()[extension]
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2408, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 64, in api_root
+    respond = run_from_server('backend_python/uploads/' + vid_name, 'backend_python/uploads/' + img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 41, in run_from_server
+    stage2.generate_output()
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage2.py", line 47, in generate_output
+    imageio.mimsave(generated_video_buffer, [img_as_ubyte(frame) for frame in predictions], fps=fps)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/core/v3_plugin_api.py", line 367, in __exit__
+    self.close()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 123, in close
+    self._flush_writer()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 466, in _flush_writer
+    primary_image.save(self._request.get_file(), **self.save_args)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2411, in save
+    raise ValueError(msg) from e
+ValueError: unknown file extension: 
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 444, in write
+    self.save_args["format"] = format or Image.registered_extensions()[extension]
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2408, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 64, in api_root
+    respond = run_from_server('backend_python/uploads/' + vid_name, 'backend_python/uploads/' + img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 42, in run_from_server
+    generated_video, local_file_path = stage2.generate_output()
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage2.py", line 53, in generate_output
+    imageio.mimsave(generated_video_buffer, [img_as_ubyte(frame) for frame in predictions], fps=fps)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/core/v3_plugin_api.py", line 367, in __exit__
+    self.close()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 123, in close
+    self._flush_writer()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 466, in _flush_writer
+    primary_image.save(self._request.get_file(), **self.save_args)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2411, in save
+    raise ValueError(msg) from e
+ValueError: unknown file extension: 
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Exception on /upload_img [POST]
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 444, in write
+    self.save_args["format"] = format or Image.registered_extensions()[extension]
+KeyError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2408, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/server.py", line 64, in api_root
+    respond = run_from_server('backend_python/uploads/' + vid_name, 'backend_python/uploads/' + img_name)
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/demo.py", line 42, in run_from_server
+    generated_video, local_file_path = stage2.generate_output()
+  File "/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/stage2.py", line 53, in generate_output
+    imageio.mimsave(generated_video_buffer, [img_as_ubyte(frame) for frame in predictions], fps=fps)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/v2.py", line 495, in mimwrite
+    return file.write(ims, is_batch=True, **kwargs)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/core/v3_plugin_api.py", line 367, in __exit__
+    self.close()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 123, in close
+    self._flush_writer()
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/imageio/plugins/pillow.py", line 466, in _flush_writer
+    primary_image.save(self._request.get_file(), **self.save_args)
+  File "/home/xiaoqingm/anaconda3/envs/rngdet/lib/python3.8/site-packages/PIL/Image.py", line 2411, in save
+    raise ValueError(msg) from e
+ValueError: unknown file extension: 
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+/media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_3.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_3.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_3.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_3.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/singing_2.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
+Project Home: /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/obama.jpg
+保存 /media/xiaoqingm/63C354536EA822D7/experiments/SOC/github/web/webapp-first-order-motion/first-order-motion/backend_python/uploads/1.mp4
