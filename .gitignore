@@ -4,3 +4,4 @@ first_order_motion/first_order_model_master/checkpoint/*
 PageNet/outputs/*
 TextRec/checkpoint/*
 RapidLaTeXOCR/rapid_latex_ocr/models/*
+__pycache__
