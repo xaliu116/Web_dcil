@@ -103,7 +103,7 @@ with gr.Blocks(title="图像智能处理") as demo:
         with gr.Row():
             input_transfer_video = gr.Video(label="上传视频")
             input_transfer_image = gr.Image(label="上传图像")
-            output_transfer_video = gr.Video()
+            output_transfer_video = gr.Video(label="动态化视频")
         with gr.Row():
             btn_transfer_image = gr.Button("图像动态化")
             btn_clear_transfer_image = gr.ClearButton(value="清空", components=[input_transfer_video, input_transfer_image, output_transfer_video])
@@ -112,8 +112,8 @@ with gr.Blocks(title="图像智能处理") as demo:
 
     with gr.Tab("手写体检测识别"):
         with gr.Row():
-            input_detect_image = gr.Image(type='filepath')
-            output_detect_image = gr.Image()
+            input_detect_image = gr.Image(type='filepath', label="上传手写体图像")
+            output_detect_image = gr.Image(label="手写体检测结果")
         with gr.Row():
             btn_det_image = gr.Button("手写体检测识别")
             btn_clear_det_image = gr.ClearButton(value="清空", components=[input_detect_image, output_detect_image])
@@ -122,8 +122,8 @@ with gr.Blocks(title="图像智能处理") as demo:
     
     with gr.Tab("多语言文本识别"):
         with gr.Row():
-            input_detect_image = gr.Image()
-            output_detect_text = gr.Textbox()
+            input_detect_image = gr.Image(label="上传多语言文本图像")
+            output_detect_text = gr.Textbox(label="多语言文本识别结果")
         with gr.Row():
             btn_mtr_image = gr.Button("多语言文本识别")
             btn_clear_mtr_image = gr.ClearButton(value="清空", components=[input_detect_image, output_detect_text])
@@ -132,9 +132,9 @@ with gr.Blocks(title="图像智能处理") as demo:
 
     with gr.Tab("公式识别"):
         with gr.Row():
-            input_detect_image = gr.Image()
-            output_detect_text = gr.Textbox()
-            output_detect_omml = gr.File()
+            input_detect_image = gr.Image(label="上传公式图像")
+            output_detect_text = gr.Textbox(label="公式识别latex结果")
+            output_detect_omml = gr.File(label="公式识别word结果")
         with gr.Row():
             btn_latex_image = gr.Button("公式识别")
             btn_clear_latex_image = gr.ClearButton(value="清空", components=[input_detect_image, output_detect_text])
